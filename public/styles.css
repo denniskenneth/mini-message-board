@@ -1,0 +1,12 @@
+body {
+    background-color: pink;
+}
+
+div#form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.create-message.content > form{
+    
+}

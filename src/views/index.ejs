@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+    <body>
+        <%- include('./partials/nav.ejs') %>
+            <% messages.forEach(message=> { %>
+                <div>
+                    <p>
+                        <%=message.user%>
+                    </p>
+                    <p>
+                        <%=message.text%>
+                    </p>
+                    <p>
+                        <%=message.added%>
+                    </p>
+                </div>
+                <% }) %>
+    </body>
+
+</html>

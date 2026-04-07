@@ -1,0 +1,21 @@
+<%- include('./partials/head.ejs') %>
+
+    <%- include('./partials/nav.ejs') %>
+    <div id="form-container">
+            <h1>Add Message</h1>
+            <div class="create-message content">
+                <form action="/new" method="post">
+                    <label for="title">User:</label>
+                    <input name="title" type="text" id="title" required>
+
+                    <label for="snippet">Text:</label>
+                    <input name="snippet" type="text" id="snippet" required>
+
+                    <!-- <label for="body">Blog body:</label>
+                    <textarea name="body" id="body" required></textarea> -->
+
+                    <button type="submit"> submit</button>
+                </form>
+            </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
