@@ -1,21 +1,19 @@
 <%- include('./partials/head.ejs') %>
 
     <%- include('./partials/nav.ejs') %>
-    <div id="form-container">
-            <h1>Add Message</h1>
-            <div class="create-message content">
+        <div id="form-container">
+            <div class="create-message content card">
+                <h1>Add Message</h1>
                 <form action="/new" method="post">
-                    <label for="title">User:</label>
-                    <input name="title" type="text" id="title" required>
+                    <label for="username">Username:</label>
+                    <input name="username" type="text" id="username" minlength="3" maxlength="50" required>
 
                     <label for="snippet">Text:</label>
-                    <input name="snippet" type="text" id="snippet" required>
+                    <textarea name="snippet" id="snippet" rows="5" minlength="5" required></textarea>
 
-                    <!-- <label for="body">Blog body:</label>
-                    <textarea name="body" id="body" required></textarea> -->
 
-                    <button type="submit"> submit</button>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
-    </div>
-    <%- include('./partials/footer.ejs') %>
+        </div>
+        <%- include('./partials/footer.ejs') %>

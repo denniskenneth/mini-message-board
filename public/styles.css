@@ -1,5 +1,86 @@
 body {
-    background-color: pink;
+    /* background-color: pink; */
+    font-size: 1.2rem;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+input, textarea {
+    padding: 0.5rem 0.5rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav>.left-align{
+    font-size: 2rem;
+}
+nav > .right-align {
+    font-size: 1.2rem;
+}
+nav > .right-align > ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+nav > .right-align > ul > li > a {
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.4rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+nav > .right-align > ul > li > a:hover {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+nav > .left-align > a {
+    transition: opacity 0.2s ease;
+}
+nav > .left-align > a:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+div#card-container{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+div.card{
+    padding: 0.5rem 1rem;
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+     /* Subtle, multiple shadows for depth */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Smooth transition for hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+div.card:hover {
+     /* Lift the card up and slightly scale */
+  transform: translateY(-5px) scale(1.02);
+  /* Deeper shadow on hover */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+div.card>.right-align{
+    display: flex;
+    justify-content: end;
+}
+div.card>.right-align>a{
+    text-decoration: none;
+    background: #000;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
 }
 
 div#form-container{
@@ -7,6 +88,26 @@ div#form-container{
     flex-direction: column;
     align-items: center;
 }
+div.create-message.content{
+    width: 30%;
+}
 div.create-message.content > form{
-    
+    display: flex;
+    flex-direction: column;
+}
+div.create-message.content > form > textarea{
+    margin-bottom: 1rem;
+}
+div.create-message.content > form > button{
+    border: none;
+    background: #000;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+div.create-message.content > form > button:hover{
+    cursor: pointer;
+    /* background: #1f1f20; */
+    font-size: 1.2rem;
 }

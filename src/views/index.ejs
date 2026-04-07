@@ -4,19 +4,24 @@
 
     <body>
         <%- include('./partials/nav.ejs') %>
-            <% messages.forEach(message=> { %>
-                <div>
-                    <p>
-                        <%=message.user%>
-                    </p>
-                    <p>
-                        <%=message.text%>
-                    </p>
-                    <p>
-                        <%=message.added%>
-                    </p>
-                </div>
-                <% }) %>
+            <div id="card-container">
+                <% messages.forEach(message=> { %>
+                    <div class="card">
+                        <p>
+                            <%=message.user%>
+                        </p>
+                        <p>
+                            <%=message.text%>
+                        </p>
+                        <p>
+                            <%=message.added%>
+                        </p>
+                        <div class="right-align">
+                            <a href="/message/<%= message.id %>">Open</a>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
     </body>
 
 </html>
